@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FacultyController;
 use App\Http\Controllers\RoleController;
@@ -31,8 +32,13 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+//Route Faculty
 Route::resource('facultys', FacultyController::class);
 
+//Route Role
 Route::resource('roles', RoleController::class);
+
+//Route User
+Route::resource('users', UserController::class);
 
 
